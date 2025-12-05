@@ -1,0 +1,86 @@
+import { ServicePageTemplate } from '../../components/shared/ServicePageTemplate'
+import { Shield, Zap, Settings } from 'lucide-react'
+export function IndustrialInfrastructure() {
+  return (
+    <ServicePageTemplate
+      title="Industrial Infrastructure"
+      subtitle="Robust industrial solutions engineered for heavy operations and maximum efficiency"
+      description="Industrial projects require specialized knowledge, robust construction techniques, and strict adherence to safety standards. RGSM Builders has extensive experience in constructing factories, warehouses, manufacturing plants, and industrial facilities. We prioritize structural integrity, operational efficiency, and workplace safety in every industrial project we undertake. Our team understands the unique challenges of industrial construction and delivers facilities that support your operations for decades."
+      image="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80"
+      features={[
+        'Manufacturing Plants & Factories',
+        'Warehouses & Distribution Centers',
+        'Cold Storage Facilities',
+        'Heavy Machinery Foundations',
+        'Industrial Sheds & Workshops',
+        'Process Plant Construction',
+        'Safety & Compliance Upgrades',
+        'Utility Infrastructure',
+      ]}
+      benefits={[
+        {
+          title: 'Built for Durability',
+          description:
+            'Structures engineered to withstand heavy loads, harsh conditions, and continuous operations.',
+          icon: <Shield className="w-8 h-8" />,
+        },
+        {
+          title: 'Operational Efficiency',
+          description:
+            'Optimized layouts for logistics, production workflows, and material handling.',
+          icon: <Zap className="w-8 h-8" />,
+        },
+        {
+          title: 'Safety Compliance',
+          description:
+            'Strict adherence to industrial safety standards, regulations, and best practices.',
+          icon: <Settings className="w-8 h-8" />,
+        },
+      ]}
+      process={[
+        {
+          step: 1,
+          title: 'Requirements Analysis',
+          description:
+            'Analyzing operational requirements, load specifications, and safety needs.',
+        },
+        {
+          step: 2,
+          title: 'Engineering Design',
+          description:
+            'Structural engineering, systems planning, and utility design.',
+        },
+        {
+          step: 3,
+          title: 'Heavy Construction',
+          description:
+            'Specialized construction using industrial-grade materials and techniques.',
+        },
+        {
+          step: 4,
+          title: 'Commissioning',
+          description:
+            'Final inspection, systems testing, and operational handover.',
+        },
+      ]}
+      stats={[
+        {
+          value: '100+',
+          label: 'Industrial Projects',
+        },
+        {
+          value: '5M+',
+          label: 'Sq Ft Built',
+        },
+        {
+          value: '100%',
+          label: 'Safety Record',
+        },
+        {
+          value: '30+',
+          label: 'Industry Partners',
+        },
+      ]}
+    />
+  )
+}
