@@ -124,7 +124,7 @@ export function Contact() {
             backgroundAttachment: 'fixed',
           }}
         >
-          <div className="absolute inset-0 bg-gradient-to-r from-primary/95 via-primary/85 to-primary/70"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-primary/70 via-primary/60 to-primary/40"></div>
         </div>
 
         <div className="container mx-auto px-4 relative z-10">

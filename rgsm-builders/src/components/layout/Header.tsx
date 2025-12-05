@@ -53,7 +53,7 @@ export function Header() {
     },
   ]
   return (
-    <header
+    <nav
       className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-white shadow-lg py-2' : 'bg-transparent py-4'}`}
     >
       {/* Top Bar - Hidden on mobile, visible on desktop */}
@@ -205,6 +205,6 @@ export function Header() {
           </div>
         </div>
       </div>
-    </header>
+    </nav>
   )
 }
