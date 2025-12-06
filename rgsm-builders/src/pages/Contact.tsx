@@ -54,40 +54,46 @@ export function Contact() {
       })
     }, 1500)
   }
-  const contactMethods = [
-    {
-      icon: <Phone className="w-6 h-6" />,
-      title: 'Call Us',
-      primary: '+1 (555) 123-4567',
-      secondary: '+1 (555) 987-6543',
-      action: 'tel:+15551234567',
-      color: 'blue',
-    },
-    {
-      icon: <Mail className="w-6 h-6" />,
-      title: 'Email Us',
-      primary: 'info@rgsmbuilders.com',
-      secondary: 'projects@rgsmbuilders.com',
-      action: 'mailto:info@rgsmbuilders.com',
-      color: 'orange',
-    },
-    {
-      icon: <MapPin className="w-6 h-6" />,
-      title: 'Visit Us',
-      primary: '123 Construction Ave',
-      secondary: 'Building District, City 12345',
-      action: '#map',
-      color: 'blue',
-    },
-    {
-      icon: <Clock className="w-6 h-6" />,
-      title: 'Working Hours',
-      primary: 'Mon - Sat: 8AM - 6PM',
-      secondary: 'Sunday: By Appointment',
-      action: null,
-      color: 'orange',
-    },
-  ]
+ const contactMethods = [
+  {
+    icon: <Phone className="w-6 h-6" />,
+    title: 'Call Us',
+    numbers: [
+      { label: '+91 – 86603 68760', link: 'tel:+918660368760' },
+      { label: '+91 – 83100 97135', link: 'tel:+918310097135' },
+      { label: '+91 – 70192 41607', link: 'tel:+917019241607' },
+    ],
+    color: 'blue',
+  },
+
+  {
+    icon: <Mail className="w-6 h-6" />,
+    title: 'Email Us',
+    primary: 'info@rgsmbuilders.com',
+    action: 'mailto:info@rgsmbuilders.com',
+    color: 'orange',
+  },
+
+  {
+    icon: <MapPin className="w-6 h-6" />,
+    title: 'Visit Our Office',
+    primary: '#227, Sai Vaibhav, 9th Main Rd, Ideal Homes Layout',
+    secondary:
+      'BEML Layout, Rajarajeshwari Nagar, Bengaluru, Karnataka – 560098',
+    action: '#map',
+    color: 'blue',
+  },
+
+  {
+    icon: <Clock className="w-6 h-6" />,
+    title: 'Working Hours',
+    primary: 'Mon - Sat: 9:00 AM - 6:30 PM',
+    secondary: 'Sunday: By Appointment',
+    action: null,
+    color: 'orange',
+  },
+]
+
   const faqs = [
     {
       question: 'How do I get a quote for my project?',
@@ -158,63 +164,93 @@ export function Contact() {
 
       {/* Contact Methods Cards */}
       <section className="relative -mt-20 z-20 pb-12">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {contactMethods.map((method, index) => (
-              <motion.div
-                key={index}
-                initial={{
-                  opacity: 0,
-                  y: 30,
-                }}
-                whileInView={{
-                  opacity: 1,
-                  y: 0,
-                }}
-                transition={{
-                  duration: 0.5,
-                  delay: index * 0.1,
-                }}
-                viewport={{
-                  once: true,
-                }}
-              >
-                <div
-                  className={`bg-white rounded-2xl shadow-xl p-6 h-full border-t-4 ${method.color === 'orange' ? 'border-accent' : 'border-primary'} hover:shadow-2xl transition-shadow duration-300`}
-                >
-                  <div
-                    className={`w-14 h-14 rounded-xl flex items-center justify-center mb-4 ${method.color === 'orange' ? 'bg-accent/10 text-accent' : 'bg-primary/10 text-primary'}`}
+    <div className="container mx-auto px-2">
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+      {contactMethods.map((method, index) => (
+        <motion.div
+          key={index}
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: index * 0.1 }}
+          viewport={{ once: true }}
+        >
+          <div
+            className={`bg-white rounded-2xl shadow-xl p-4 h-full border-t-4 ${
+              method.color === 'orange' ? 'border-accent' : 'border-primary'
+            } hover:shadow-2xl transition-shadow duration-300`}
+          >
+
+            {/* Icon */}
+            <div
+              className={`w-14 h-14 rounded-xl flex items-center justify-center mb-4 ${
+                method.color === 'orange'
+                  ? 'bg-accent/10 text-accent'
+                  : 'bg-primary/10 text-primary'
+              }`}
+            >
+              {method.icon}
+            </div>
+
+            {/* Title */}
+            <h3 className="font-bold text-lg text-gray-900 mb-2">
+              {method.title}
+            </h3>
+
+            {/* ----------------------- */}
+            {/*   CASE 1: MULTIPLE PHONE NUMBERS */}
+            {/* ----------------------- */}
+            {method.numbers ? (
+              <div className="space-y-1">
+                {method.numbers.map((num, i) => (
+                  <a
+                    key={i}
+                    href={num.link}
+                    className="block text-gray-800 font-medium hover:text-accent transition-colors"
                   >
-                    {method.icon}
-                  </div>
-                  <h3 className="font-bold text-lg text-gray-900 mb-2">
-                    {method.title}
-                  </h3>
-                  {method.action ? (
-                    <a href={method.action} className="block">
-                      <p className="text-gray-800 font-medium hover:text-accent transition-colors">
-                        {method.primary}
-                      </p>
+                    {num.label}
+                  </a>
+                ))}
+              </div>
+            ) : (
+              /* ----------------------- */
+              /*   CASE 2: DEFAULT CARDS */
+              /* ----------------------- */
+              <>
+                {method.action ? (
+                  <a href={method.action} className="block">
+                    <p className="text-gray-800 font-medium hover:text-accent transition-colors">
+                      {method.primary}
+                    </p>
+                    {method.secondary && (
                       <p className="text-gray-500 text-sm">
                         {method.secondary}
                       </p>
-                    </a>
-                  ) : (
-                    <>
-                      <p className="text-gray-800 font-medium">
-                        {method.primary}
-                      </p>
+                    )}
+                  </a>
+                ) : (
+                  <>
+                    <p className="text-gray-800 font-medium">
+                      {method.primary}
+                    </p>
+                    {method.secondary && (
                       <p className="text-gray-500 text-sm">
                         {method.secondary}
                       </p>
-                    </>
-                  )}
-                </div>
-              </motion.div>
-            ))}
+                    )}
+                  </>
+                )}
+              </>
+            )}
+
           </div>
-        </div>
-      </section>
+        </motion.div>
+      ))}
+
+    </div>
+  </div>
+</section>
+
 
       {/* Main Contact Section */}
       <section className="py-20">
@@ -259,19 +295,15 @@ export function Contact() {
                     {[
                       {
                         icon: <Facebook className="w-5 h-5" />,
-                        href: '#',
-                      },
-                      {
-                        icon: <Twitter className="w-5 h-5" />,
-                        href: '#',
+                        href: 'https://www.facebook.com/share/1Be6odwUL8/',
                       },
                       {
                         icon: <Instagram className="w-5 h-5" />,
-                        href: '#',
+                        href: 'https://www.instagram.com/rgsmbuilders?igsh=MTNyOXZ0Ynd2NjRoZw==',
                       },
                       {
                         icon: <Linkedin className="w-5 h-5" />,
-                        href: '#',
+                        href: 'https://www.linkedin.com/company/rgsm-builders/',
                       },
                     ].map((social, index) => (
                       <a
@@ -353,7 +385,7 @@ export function Contact() {
                             onChange={handleChange}
                             required
                             className="w-full px-4 py-4 rounded-xl border border-gray-200 focus:ring-2 focus:ring-accent/50 focus:border-accent transition-all outline-none bg-gray-50 hover:bg-white"
-                            placeholder="John Doe"
+                            placeholder="Enter Name"
                           />
                         </div>
                         <div>
@@ -371,7 +403,7 @@ export function Contact() {
                             onChange={handleChange}
                             required
                             className="w-full px-4 py-4 rounded-xl border border-gray-200 focus:ring-2 focus:ring-accent/50 focus:border-accent transition-all outline-none bg-gray-50 hover:bg-white"
-                            placeholder="john@example.com"
+                            placeholder="abc@gmail.com"
                           />
                         </div>
                       </div>
@@ -391,7 +423,7 @@ export function Contact() {
                             value={formState.phone}
                             onChange={handleChange}
                             className="w-full px-4 py-4 rounded-xl border border-gray-200 focus:ring-2 focus:ring-accent/50 focus:border-accent transition-all outline-none bg-gray-50 hover:bg-white"
-                            placeholder="+1 (555) 000-0000"
+                            placeholder="Enter Phone Number"
                           />
                         </div>
                         <div>
@@ -431,29 +463,6 @@ export function Contact() {
                             </option>
                           </select>
                         </div>
-                      </div>
-
-                      <div>
-                        <label
-                          htmlFor="budget"
-                          className="block text-sm font-semibold text-gray-700 mb-2"
-                        >
-                          Estimated Budget
-                        </label>
-                        <select
-                          id="budget"
-                          name="budget"
-                          value={formState.budget}
-                          onChange={handleChange}
-                          className="w-full px-4 py-4 rounded-xl border border-gray-200 focus:ring-2 focus:ring-accent/50 focus:border-accent transition-all outline-none bg-gray-50 hover:bg-white appearance-none cursor-pointer"
-                        >
-                          <option value="">Select budget range</option>
-                          <option value="under-50k">Under $50,000</option>
-                          <option value="50k-100k">$50,000 - $100,000</option>
-                          <option value="100k-500k">$100,000 - $500,000</option>
-                          <option value="500k-1m">$500,000 - $1,000,000</option>
-                          <option value="over-1m">Over $1,000,000</option>
-                        </select>
                       </div>
 
                       <div>
@@ -524,44 +533,45 @@ export function Contact() {
       {/* Map Section */}
       <section id="map" className="relative">
         <div className="h-[500px] w-full bg-gray-200 relative">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.1422937950147!2d-73.98731968482413!3d40.75889497932681!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25855c6480299%3A0x55194ec5a1ae072e!2sTimes%20Square!5e0!3m2!1sen!2sus!4v1623163723565!5m2!1sen!2sus"
-            width="100%"
-            height="100%"
-            style={{
-              border: 0,
-            }}
-            allowFullScreen={true}
-            loading="lazy"
-            title="Our Location"
-            className="filter grayscale-[50%] hover:grayscale-0 transition-all duration-500"
-          ></iframe>
-
+         <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3890.094079009586!2d77.5157374!3d12.9213884!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTLCsDU1JzE3LjAiTiA3N8KwMzEnMDUuOSJF!5e0!3m2!1sen!2sin!4v1700002000000!5m2!1sen!2sin"
+          width="100%"
+          height="100%"
+          style={{ border: 0 }}
+          allowFullScreen={true}
+          loading="lazy"
+          title="RGSM Location"
+          className="filter grayscale-[50%] hover:grayscale-0 transition-all duration-500"
+        />
           {/* Floating Info Card */}
-          <div className="absolute top-8 left-8 bg-white p-6 rounded-2xl shadow-2xl max-w-sm hidden md:block">
-            <div className="flex items-center mb-4">
-              <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mr-4">
-                <Building2 className="w-6 h-6 text-primary" />
-              </div>
-              <div>
-                <h4 className="font-bold text-gray-900">RGSM Builders HQ</h4>
-                <p className="text-gray-500 text-sm">Main Office</p>
-              </div>
+        <div className="absolute top-8 left-8 bg-white p-6 rounded-2xl shadow-2xl max-w-sm hidden md:block">
+          <div className="flex items-center mb-4">
+            <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mr-4">
+              <Building2 className="w-6 h-6 text-primary" />
             </div>
-            <p className="text-gray-600 text-sm mb-4">
-              123 Construction Ave, Building District
-              <br />
-              City, State 12345
-            </p>
-            <a
-              href="https://maps.google.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-accent font-semibold text-sm flex items-center hover:text-accent-dark transition-colors"
-            >
-              Get Directions <ArrowRight className="w-4 h-4 ml-1" />
-            </a>
+            <div>
+              <h4 className="font-bold text-gray-900">RGSM Builders HQ</h4>
+              <p className="text-gray-500 text-sm">Main Office</p>
+            </div>
           </div>
+
+          {/* Updated Address */}
+          <p className="text-gray-600 text-sm mb-4 leading-relaxed">
+            #227, Sai Vaibhav, 9th Main Rd, Ideal Homes Layout<br />
+            BEML Layout, Rajarajeshwari Nagar,<br />
+            Bengaluru, Karnataka – 560098
+          </p>
+
+          <a
+            href="https://www.google.com/maps/place/12%C2%B055'17.0%22N+77%C2%B031'05.9%22E"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-accent font-semibold text-sm flex items-center hover:text-accent-dark transition-colors"
+          >
+            Get Directions <ArrowRight className="w-4 h-4 ml-1" />
+          </a>
+        </div>
+
         </div>
       </section>
 

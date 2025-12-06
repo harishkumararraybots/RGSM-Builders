@@ -171,7 +171,7 @@ export function Hero() {
                   ))}
                 </div>
                 <div className="ml-4">
-                  <div className="text-white font-bold">500+ Projects</div>
+                  <div className="text-white font-bold">30+ Projects</div>
                   <div className="text-blue-200 text-sm">
                     Successfully Completed
                   </div>
@@ -242,7 +242,7 @@ export function Hero() {
                     </div>
                     <div>
                       <div className="text-sm text-blue-200">Call Us</div>
-                      <div className="font-semibold">+1 (555) 123-4567</div>
+                      <div className="font-semibold">+91 – 86603 68760</div>
                     </div>
                   </div>
                   <div className="flex items-center text-white">

@@ -15,6 +15,7 @@ import {
   Building2,
   Handshake,
 } from 'lucide-react'
+import { InfoSection } from '../components/shared/InfoSection'
 export function About() {
   const team = [
     {
@@ -52,28 +53,28 @@ export function About() {
   ]
   const milestones = [
     {
-      year: '2008',
+      year: '2021',
       title: 'Company Founded',
       description:
         'Started as a small residential contractor with a vision for excellence',
     },
     {
-      year: '2012',
+      year: '2022',
       title: 'Commercial Expansion',
       description: 'Expanded into commercial construction projects',
     },
     {
-      year: '2016',
+      year: '2023',
       title: 'Industrial Division',
       description: 'Launched industrial infrastructure services',
     },
     {
-      year: '2020',
+      year: '2024',
       title: 'Regional Leader',
       description: 'Became the leading construction company in the region',
     },
     {
-      year: '2024',
+      year: '2025',
       title: 'Innovation Hub',
       description: 'Opened state-of-the-art design and planning center',
     },
@@ -98,12 +99,12 @@ export function About() {
   ]
   const stats = [
     {
-      value: '500+',
+      value: '30+',
       label: 'Projects Completed',
       icon: <Building2 className="w-6 h-6" />,
     },
     {
-      value: '15+',
+      value: '4+',
       label: 'Years Experience',
       icon: <Calendar className="w-6 h-6" />,
     },
@@ -158,17 +159,17 @@ export function About() {
               Excellence
             </h1>
             <p className="text-xl text-blue-100 mb-8 leading-relaxed">
-              For over 15 years, we've been transforming visions into reality
+              For over 4+ years, we've been transforming visions into reality
               with unwavering commitment to quality, safety, and client
               satisfaction.
             </p>
             <div className="flex flex-wrap gap-4">
-              <Button variant="primary" size="lg" to="/contact" icon>
+              {/* <Button variant="primary" size="lg" to="/contact" icon>
                 Start Your Project
               </Button>
               <Button variant="white" size="lg" to="/services/planning">
                 Our Services
-              </Button>
+              </Button> */}
             </div>
           </motion.div>
         </div>
@@ -224,13 +225,13 @@ export function About() {
               <AnimatedSection direction="right">
                 <div className="relative">
                   <img
-                    src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+                    src="public/img-15.png"
                     alt="Construction Team"
                     className="rounded-2xl shadow-2xl w-full"
                   />
                   {/* Floating Card */}
                   <div className="absolute -bottom-8 -right-8 bg-accent text-white p-6 rounded-xl shadow-xl hidden md:block">
-                    <div className="text-4xl font-bold">15+</div>
+                    <div className="text-4xl font-bold">6+</div>
                     <div className="text-sm opacity-90">
                       Years of Excellence
                     </div>
@@ -247,7 +248,7 @@ export function About() {
                   Our Story
                 </span>
                 <h2 className="text-3xl md:text-5xl font-bold text-primary mt-3 mb-6">
-                  Building Excellence Since 2008
+                  Building Excellence 
                 </h2>
                 <p className="text-gray-600 mb-6 leading-relaxed text-lg">
                   RGSM Builders was founded with a simple yet powerful vision:
@@ -298,7 +299,7 @@ export function About() {
           </div>
         </div>
       </section>
-
+    <InfoSection/>
       {/* Mission & Vision Section */}
       <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
         <div className="container mx-auto px-4">

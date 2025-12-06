@@ -16,6 +16,7 @@ import {
 } from 'lucide-react'
 import { FeaturedProjects } from '../components/home/FeaturedProject'
 import { Testimonials } from '../components/home/Testimonial'
+import { ConstructionSection } from '../components/ConstructionSection'
 export function Home() {
   const whyChooseUs = [
     {
@@ -43,13 +44,13 @@ export function Home() {
         'Rigorous safety protocols ensure a secure environment for workers and clients alike.',
     },
   ]
-  const partners = [
-    'https://images.unsplash.com/photo-1599305445671-ac291c95aaa9?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80',
-    'https://images.unsplash.com/photo-1599305445671-ac291c95aaa9?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80',
-    'https://images.unsplash.com/photo-1599305445671-ac291c95aaa9?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80',
-    'https://images.unsplash.com/photo-1599305445671-ac291c95aaa9?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80',
-    'https://images.unsplash.com/photo-1599305445671-ac291c95aaa9?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80',
-  ]
+  // const partners = [
+  //   'https://images.unsplash.com/photo-1599305445671-ac291c95aaa9?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80',
+  //   'https://images.unsplash.com/photo-1599305445671-ac291c95aaa9?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80',
+  //   'https://images.unsplash.com/photo-1599305445671-ac291c95aaa9?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80',
+  //   'https://images.unsplash.com/photo-1599305445671-ac291c95aaa9?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80',
+  //   'https://images.unsplash.com/photo-1599305445671-ac291c95aaa9?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80',
+  // ]
   return (
     <div className="min-h-screen">
       <Hero />
@@ -60,11 +61,11 @@ export function Home() {
           <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16">
             {[
               {
-                value: '15+',
+                value: '10+',
                 label: 'Years Experience',
               },
               {
-                value: '500+',
+                value: '30+',
                 label: 'Projects Completed',
               },
               {
@@ -113,13 +114,14 @@ export function Home() {
               <AnimatedSection direction="right">
                 <div className="relative">
                   <img
-                    src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+                    src="/public/img-21.avif"
+                    // src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
                     alt="Construction Excellence"
-                    className="rounded-2xl shadow-2xl w-full"
+                    className="rounded-2xl shadow-2xl w-full "
                   />
                   {/* Experience Badge */}
                   <div className="absolute -bottom-6 -right-6 bg-accent text-white p-6 rounded-2xl shadow-xl hidden md:block">
-                    <div className="text-4xl font-bold">15+</div>
+                    <div className="text-4xl font-bold">6+</div>
                     <div className="text-sm opacity-90">
                       Years of Excellence
                     </div>
@@ -137,7 +139,7 @@ export function Home() {
                   About RGSM Builders
                 </span>
                 <h2 className="text-3xl md:text-5xl font-bold text-primary mt-3 mb-6">
-                  Building Dreams Into Reality Since 2008
+                  Building Dreams Into Reality 
                 </h2>
                 <p className="text-gray-600 mb-6 text-lg leading-relaxed">
                   RGSM Builders has been at the forefront of construction
@@ -180,7 +182,7 @@ export function Home() {
       </section>
 
       <ServicesOverview />
-
+      <ConstructionSection/>
       {/* Why Choose Us Section */}
       <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
         <div className="container mx-auto px-4">

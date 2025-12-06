@@ -32,7 +32,7 @@ export function FeaturedProjects() {
     {
       title: 'Skyline Office Complex',
       category: 'commercial',
-      location: 'Downtown District',
+      location: 'Bengaluru',
       year: '2023',
       size: '50,000 sq ft',
       image:
@@ -41,11 +41,11 @@ export function FeaturedProjects() {
     {
       title: 'Modern Riverside Villa',
       category: 'residential',
-      location: 'Riverside Heights',
+      location: 'Bengaluru',
       year: '2023',
       size: '8,500 sq ft',
       image:
-        'https://images.unsplash.com/photo-1600596542815-2495db98dada?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+        'public/img-5.jpg',
     },
     {
       title: 'Tech Manufacturing Hub',
@@ -59,7 +59,7 @@ export function FeaturedProjects() {
     {
       title: 'Luxury Apartment Tower',
       category: 'residential',
-      location: 'City Center',
+      location: 'Bengaluru',
       year: '2023',
       size: '200 Units',
       image:
@@ -68,7 +68,7 @@ export function FeaturedProjects() {
     {
       title: 'Corporate Headquarters',
       category: 'commercial',
-      location: 'Business Bay',
+      location: 'Bengaluru',
       year: '2022',
       size: '75,000 sq ft',
       image:
@@ -77,7 +77,7 @@ export function FeaturedProjects() {
     {
       title: 'Logistics Warehouse',
       category: 'industrial',
-      location: 'Port District',
+      location: 'Bengaluru',
       year: '2023',
       size: '200,000 sq ft',
       image:

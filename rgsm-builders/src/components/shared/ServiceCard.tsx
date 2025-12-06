@@ -13,7 +13,6 @@ interface ServiceCardProps {
 export function ServiceCard({
   title,
   description,
-  icon,
   link,
   image,
   index,
@@ -44,9 +43,9 @@ export function ServiceCard({
           alt={title}
           className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
         />
-        <div className="absolute -bottom-6 right-6 bg-accent text-white p-4 rounded-lg shadow-lg z-20 group-hover:bg-primary transition-colors duration-300">
+        {/* <div className="absolute -bottom-6 right-6 bg-accent text-white p-4 rounded-lg shadow-lg z-20 group-hover:bg-primary transition-colors duration-300">
           {icon}
-        </div>
+        </div> */}
       </div>
 
       <div className="p-6 pt-10 flex-grow flex flex-col">

@@ -41,14 +41,14 @@ export function Stats() {
   const stats = [
     {
       label: 'Years of Excellence',
-      value: 15,
+      value: 6,
       suffix: '+',
       icon: <Clock className="w-8 h-8" />,
       description: 'Industry experience',
     },
     {
       label: 'Projects Completed',
-      value: 500,
+      value: 30,
       suffix: '+',
       icon: <Building className="w-8 h-8" />,
       description: 'Successful deliveries',
@@ -62,18 +62,18 @@ export function Stats() {
     },
     {
       label: 'Expert Team Members',
-      value: 200,
+      value: 20,
       suffix: '+',
       icon: <Users className="w-8 h-8" />,
       description: 'Skilled professionals',
     },
-    {
-      label: 'Awards Won',
-      value: 25,
-      suffix: '+',
-      icon: <Award className="w-8 h-8" />,
-      description: 'Industry recognition',
-    },
+    // {
+    //   label: 'Awards Won',
+    //   value: 25,
+    //   suffix: '+',
+    //   icon: <Award className="w-8 h-8" />,
+    //   description: 'Industry recognition',
+    // },
     {
       label: 'Cities Served',
       value: 15,
@@ -128,7 +128,7 @@ export function Stats() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
           {stats.map((stat, index) => (
             <motion.div
               key={index}

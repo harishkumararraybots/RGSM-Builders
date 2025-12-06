@@ -77,7 +77,7 @@ export function Planning() {
           label: 'On-Time Delivery',
         },
         {
-          value: '15+',
+          value: '6+',
           label: 'Years Experience',
         },
       ]}

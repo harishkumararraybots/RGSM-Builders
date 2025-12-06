@@ -45,6 +45,8 @@ npm install framer-motion
 
 ** Install Lucide Icons**
 npm install lucide-react
+npm install lottie-react
+
 
  **Run the App**
 npm run dev

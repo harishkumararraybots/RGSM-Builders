@@ -47,7 +47,7 @@ export function ServicePageTemplate({
 }: ServicePageTemplateProps) {
   const defaultStats = stats || [
     {
-      value: '100+',
+      value: '30+',
       label: 'Projects Completed',
     },
     {
@@ -55,17 +55,17 @@ export function ServicePageTemplate({
       label: 'Client Satisfaction',
     },
     {
-      value: '15+',
+      value: '6+',
       label: 'Years Experience',
     },
     {
-      value: '50+',
+      value: '20+',
       label: 'Expert Team',
     },
   ]
   const defaultGallery = gallery || [
-    'https://images.unsplash.com/photo-1503387762-592deb58ef4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
-    'https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
+    '/public/img-12.jpg',
+    '/public/img-21.avif',
     'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
     'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
   ]
@@ -241,7 +241,7 @@ export function ServicePageTemplate({
                         href="tel:+15551234567"
                         className="text-xl font-bold hover:text-accent transition-colors"
                       >
-                        +1 (555) 123-4567
+                      +91 – 86603 68760
                       </a>
                     </div>
                   </div>

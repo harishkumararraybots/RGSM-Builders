@@ -1,50 +1,43 @@
 import { ServiceCard } from '../shared/ServiceCard'
 import { AnimatedSection } from '../shared/AnimatedSection'
 import { Button } from '../shared/Button'
-import {
-  PencilRuler,
-  Home,
-  Building2,
-  Factory,
-  Hammer,
-  Key,
-  DraftingCompass,
-  HardHat,
-} from 'lucide-react'
+
 export function ServicesOverview() {
   const services = [
     {
       title: 'Planning',
       description:
         'Strategic project planning and management to ensure your construction project starts on the right foundation.',
-      icon: <PencilRuler className="w-6 h-6" />,
+      // icon: <PencilRuler className="w-6 h-6" />,
       link: '/services/planning',
       image:
-        'https://images.unsplash.com/photo-1503387762-592deb58ef4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+        'public/img-12.jpg',
     },
     {
       title: 'Architectural Work',
       description:
         'Comprehensive 2D and 3D architectural designs that bring your vision to life before construction begins.',
-      icon: <DraftingCompass className="w-6 h-6" />,
+      // icon: <DraftingCompass className="w-6 h-6" />,
       link: '/services/architectural-work',
-      image:
-        'https://images.unsplash.com/photo-1487958449943-2429e8be8625?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      // image:
+      //   'https://images.unsplash.com/photo-1487958449943-2429e8be8625?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+         image:
+        'public/img-4.jpg',
     },
     {
       title: 'Residential Construction',
       description:
         'Building dream homes with attention to detail, quality materials, and superior craftsmanship.',
-      icon: <Home className="w-6 h-6" />,
+      // icon: <Home className="w-6 h-6" />,
       link: '/services/residential-construction',
       image:
-        'https://images.unsplash.com/photo-1580587771525-78b9dba3b91d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+        'public/img-19.jpg',
     },
     {
       title: 'Commercial Projects',
       description:
         'Office buildings, retail spaces, and commercial complexes designed for business success.',
-      icon: <Building2 className="w-6 h-6" />,
+      // icon: <Building2 className="w-6 h-6" />,
       link: '/services/commercial-projects',
       image:
         'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
@@ -53,16 +46,16 @@ export function ServicesOverview() {
       title: 'Industrial Infrastructure',
       description:
         'Robust industrial facilities, warehouses, and factories built to withstand heavy operations.',
-      icon: <Factory className="w-6 h-6" />,
+      // icon: <Factory className="w-6 h-6" />,
       link: '/services/industrial-infrastructure',
       image:
-        'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+        'public/img-18.jpg',
     },
     {
       title: 'Renovation & Remodeling',
       description:
         'Transforming existing spaces into modern, functional environments that meet current needs.',
-      icon: <Hammer className="w-6 h-6" />,
+      // icon: <Hammer className="w-6 h-6" />,
       link: '/services/renovation-remodeling',
       image:
         'https://images.unsplash.com/photo-1534237710431-e2fc698436d0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
@@ -71,16 +64,16 @@ export function ServicesOverview() {
       title: 'Turnkey Solutions',
       description:
         'End-to-end project handling from concept to completion, delivering ready-to-use facilities.',
-      icon: <Key className="w-6 h-6" />,
+      // icon: <Key className="w-6 h-6" />,
       link: '/services/turnkey-solutions',
       image:
-        'https://images.unsplash.com/photo-1560518883-ce09059ee971?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+        'public/img-13.jpg',
     },
     {
       title: 'Steel Structure Design',
       description:
         'Specialized steel structure design and fabrication for durability and architectural flexibility.',
-      icon: <HardHat className="w-6 h-6" />,
+      // icon: <HardHat className="w-6 h-6" />,
       link: '/services/steel-structure-design',
       image:
         'https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
@@ -109,7 +102,7 @@ export function ServicesOverview() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {services.map((service, index) => (
-            <ServiceCard key={index} {...service} index={index} />
+            <ServiceCard icon={undefined} key={index} {...service} index={index} />
           ))}
         </div>
 
