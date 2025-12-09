@@ -45,7 +45,7 @@ export function FeaturedProjects() {
       year: '2023',
       size: '8,500 sq ft',
       image:
-        'public/img-5.jpg',
+        '/img-5.jpg',
     },
     {
       title: 'Tech Manufacturing Hub',

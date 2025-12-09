@@ -1,6 +1,6 @@
 import  { useEffect, useState, useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
-import { Users, Building, Award, Clock, TrendingUp, MapPin } from 'lucide-react'
+import { Users, Building,  Clock, TrendingUp, MapPin } from 'lucide-react'
 function AnimatedCounter({
   value,
   suffix = '',

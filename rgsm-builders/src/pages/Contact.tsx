@@ -13,7 +13,6 @@ import {
   CheckCircle,
   ArrowRight,
   Facebook,
-  Twitter,
   Instagram,
   Linkedin,
 } from 'lucide-react'
@@ -38,22 +37,36 @@ export function Contact() {
       [e.target.name]: e.target.value,
     })
   }
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    setIsSubmitting(true)
-    setTimeout(() => {
-      setIsSubmitting(false)
-      setIsSubmitted(true)
-      setFormState({
-        name: '',
-        email: '',
-        phone: '',
-        service: '',
-        budget: '',
-        message: '',
-      })
-    }, 1500)
-  }
+    const handleSubmit = async (e: React.FormEvent) => {
+      e.preventDefault();
+      setIsSubmitting(true);
+
+      try {
+        // 1️⃣ Email goes to backend → nodemailer
+        await sendEmail();
+
+        // 2️⃣ WhatsApp message goes to backend → WhatsApp API
+        await sendWhatsApp();
+
+        // 3️⃣ Show success message
+        setIsSubmitted(true);
+
+        // Reset form
+        setFormState({
+          name: "",
+          email: "",
+          phone: "",
+          service: "",
+          budget: "",
+          message: "",
+        });
+      } catch (error) {
+        alert("Something went wrong. Please try again.");
+      }
+
+      setIsSubmitting(false);
+    };
+
  const contactMethods = [
   {
     icon: <Phone className="w-6 h-6" />,
@@ -116,6 +129,34 @@ export function Contact() {
         'Yes, we work with several financing partners to offer flexible payment options for qualified projects. Ask our team for details during your consultation.',
     },
   ]
+  // 🔥 SEND EMAIL TO BACKEND
+const sendEmail = async () => {
+  const response = await fetch("http://localhost:5000/api/send-email", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(formState),
+  });
+
+  return response.json();
+};
+
+// 🔥 SEND WHATSAPP MESSAGE TO BACKEND
+const sendWhatsApp = async () => {
+  const response = await fetch("http://localhost:5000/api/send-whatsapp", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      name: formState.name,
+      phone: formState.phone,
+      email: formState.email,
+      service: formState.service,
+      message: formState.message,
+    }),
+  });
+
+  return response.json();
+};
+
   return (
     <div className="pt-20">
       {/* Hero Section */}

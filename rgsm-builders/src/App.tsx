@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import {
   BrowserRouter as Router,
   Routes,
@@ -21,6 +21,8 @@ import { SteelStructureDesign } from "./pages/services/SteelStructureDesign";
 import { ArchitecturalWork } from "./pages/services/Architecturalwork";
 import { CommercialProjects } from "./pages/services/CommercialProject";
 import { TurnkeySolutions } from "./pages/services/TurnkeySolution";
+import { WhatsappButton } from "./components/shared/WhatsappButton";
+import { WhatsappModal } from "./components/shared/WhatsappModal";
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -30,10 +32,11 @@ function ScrollToTop() {
 
   return null;
 }
-
+ 
 export function App() {
+    const [openModal, setOpenModal] = useState(false);
   return (
-    <Router>
+    <>
       <ScrollToTop />
       <div className="flex flex-col min-h-screen bg-white">
         <Header />
@@ -55,7 +58,9 @@ export function App() {
         </main>
         <Footer />
       </div>
-    </Router>
+     <WhatsappButton onOpen={() => setOpenModal(true)} />
+      <WhatsappModal isOpen={openModal} onClose={() => setOpenModal(false)} />
+    </>
   );
 }
 

@@ -64,8 +64,8 @@ export function ServicePageTemplate({
     },
   ]
   const defaultGallery = gallery || [
-    '/public/img-12.jpg',
-    '/public/img-21.avif',
+    '/img-12.jpg',
+    '/img-21.avif',
     'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
     'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
   ]

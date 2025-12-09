@@ -11,7 +11,7 @@ export function ServicesOverview() {
       // icon: <PencilRuler className="w-6 h-6" />,
       link: '/services/planning',
       image:
-        'public/img-12.jpg',
+        '/img-12.jpg',
     },
     {
       title: 'Architectural Work',
@@ -22,7 +22,7 @@ export function ServicesOverview() {
       // image:
       //   'https://images.unsplash.com/photo-1487958449943-2429e8be8625?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
          image:
-        'public/img-4.jpg',
+        '/img-4.jpg',
     },
     {
       title: 'Residential Construction',
@@ -31,7 +31,7 @@ export function ServicesOverview() {
       // icon: <Home className="w-6 h-6" />,
       link: '/services/residential-construction',
       image:
-        'public/img-19.jpg',
+        '/img-19.jpg',
     },
     {
       title: 'Commercial Projects',
@@ -49,7 +49,7 @@ export function ServicesOverview() {
       // icon: <Factory className="w-6 h-6" />,
       link: '/services/industrial-infrastructure',
       image:
-        'public/img-18.jpg',
+        '/img-18.jpg',
     },
     {
       title: 'Renovation & Remodeling',
@@ -67,7 +67,7 @@ export function ServicesOverview() {
       // icon: <Key className="w-6 h-6" />,
       link: '/services/turnkey-solutions',
       image:
-        'public/img-13.jpg',
+        '/img-13.jpg',
     },
     {
       title: 'Steel Structure Design',

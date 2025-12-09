@@ -225,7 +225,7 @@ export function About() {
               <AnimatedSection direction="right">
                 <div className="relative">
                   <img
-                    src="public/img-15.png"
+                    src="/img-15.png"
                     alt="Construction Team"
                     className="rounded-2xl shadow-2xl w-full"
                   />

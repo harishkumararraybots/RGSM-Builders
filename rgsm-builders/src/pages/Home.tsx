@@ -114,7 +114,7 @@ export function Home() {
               <AnimatedSection direction="right">
                 <div className="relative">
                   <img
-                    src="/public/img-21.avif"
+                    src="/img-21.avif"
                     // src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
                     alt="Construction Excellence"
                     className="rounded-2xl shadow-2xl w-full "
