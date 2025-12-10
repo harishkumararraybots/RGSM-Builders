@@ -1,6 +1,16 @@
+import { useEffect, useState } from 'react';
 import { ServicePageTemplate } from '../../components/shared/ServicePageTemplate'
 import { TrendingUp, Building2, Users } from 'lucide-react'
+import { Loader } from '../../components/home/Loader';
 export function CommercialProjects() {
+      const [loading, setLoading] = useState<boolean>(true);
+    
+      useEffect(() => {
+        const timer = setTimeout(() => setLoading(false), 1000); // 2s loader
+        return () => clearTimeout(timer);
+      }, []);
+    
+      if (loading) return <Loader />;
   return (
     <ServicePageTemplate
       title="Commercial Projects"

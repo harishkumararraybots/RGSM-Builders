@@ -16,6 +16,8 @@ import {
   Handshake,
 } from 'lucide-react'
 import { InfoSection } from '../components/shared/InfoSection'
+import { useEffect, useState } from 'react'
+import { Loader } from '../components/home/Loader'
 export function About() {
   const team = [
     {
@@ -119,6 +121,14 @@ export function About() {
       icon: <TrendingUp className="w-6 h-6" />,
     },
   ]
+    const [loading, setLoading] = useState<boolean>(true);
+  
+    useEffect(() => {
+      const timer = setTimeout(() => setLoading(false), 1000); // 2s loader
+      return () => clearTimeout(timer);
+    }, []);
+  
+    if (loading) return <Loader />;
   return (
     <div className="pt-20">
       {/* Hero Section with Parallax */}

@@ -1,7 +1,21 @@
+import { useEffect, useState } from 'react';
+import { ConstructionShowcase } from '../../components/shared/ConstructionShowcase'
 import { ServicePageTemplate } from '../../components/shared/ServicePageTemplate'
 import { Eye, Layers, Palette } from 'lucide-react'
+import { Loader } from '../../components/home/Loader';
+
 export function ArchitecturalWork() {
+     const [loading, setLoading] = useState<boolean>(true);
+  
+    useEffect(() => {
+      const timer = setTimeout(() => setLoading(false), 1000); // 2s loader
+      return () => clearTimeout(timer);
+    }, []);
+  
+    if (loading) return <Loader />;
   return (
+    <>
+    
     <ServicePageTemplate
       title="Architectural Work"
       subtitle="Innovative 2D & 3D architectural design solutions that bring your vision to life"
@@ -54,7 +68,7 @@ export function ArchitecturalWork() {
           step: 3,
           title: '3D Visualization',
           description:
-            'Development of 3D models and photorealistic renders to visualize the final result.',
+            'Development of 3D models to visualize the final result.',
         },
         {
           step: 4,
@@ -82,5 +96,8 @@ export function ArchitecturalWork() {
         },
       ]}
     />
+  <ConstructionShowcase/>
+      </>
   )
+
 }

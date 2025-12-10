@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
 import { AnimatedSection } from '../components/shared/AnimatedSection'
 import { Button } from '../components/shared/Button'
@@ -16,6 +16,7 @@ import {
   Instagram,
   Linkedin,
 } from 'lucide-react'
+import { Loader } from '../components/home/Loader'
 export function Contact() {
   const [formState, setFormState] = useState({
     name: '',
@@ -156,7 +157,14 @@ const sendWhatsApp = async () => {
 
   return response.json();
 };
-
+  const [loading, setLoading] = useState<boolean>(true);
+  
+    useEffect(() => {
+      const timer = setTimeout(() => setLoading(false), 1000); // 2s loader
+      return () => clearTimeout(timer);
+    }, []);
+  
+    if (loading) return <Loader />;
   return (
     <div className="pt-20">
       {/* Hero Section */}

@@ -22,7 +22,7 @@ export function ServicesOverview() {
       // image:
       //   'https://images.unsplash.com/photo-1487958449943-2429e8be8625?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
          image:
-        '/img-4.jpg',
+        '/img-25.png',
     },
     {
       title: 'Residential Construction',
@@ -31,7 +31,7 @@ export function ServicesOverview() {
       // icon: <Home className="w-6 h-6" />,
       link: '/services/residential-construction',
       image:
-        '/img-19.jpg',
+        '/img-20.jpg',
     },
     {
       title: 'Commercial Projects',
@@ -58,7 +58,7 @@ export function ServicesOverview() {
       // icon: <Hammer className="w-6 h-6" />,
       link: '/services/renovation-remodeling',
       image:
-        'https://images.unsplash.com/photo-1534237710431-e2fc698436d0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+        '/img-19.jpg',
     },
     {
       title: 'Turnkey Solutions',

@@ -17,6 +17,8 @@ import {
 import { FeaturedProjects } from '../components/home/FeaturedProject'
 import { Testimonials } from '../components/home/Testimonial'
 import { ConstructionSection } from '../components/ConstructionSection'
+import { useEffect, useState } from 'react'
+import { Loader } from '../components/home/Loader'
 export function Home() {
   const whyChooseUs = [
     {
@@ -51,6 +53,15 @@ export function Home() {
   //   'https://images.unsplash.com/photo-1599305445671-ac291c95aaa9?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80',
   //   'https://images.unsplash.com/photo-1599305445671-ac291c95aaa9?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80',
   // ]
+    const [loading, setLoading] = useState<boolean>(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setLoading(false), 1000); // 2s loader
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (loading) return <Loader />;
+
   return (
     <div className="min-h-screen">
       <Hero />
