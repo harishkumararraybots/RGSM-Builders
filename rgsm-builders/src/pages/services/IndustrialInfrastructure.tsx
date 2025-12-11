@@ -16,7 +16,8 @@ export function IndustrialInfrastructure() {
       title="Industrial Infrastructure"
       subtitle="Robust industrial solutions engineered for heavy operations and maximum efficiency"
       description="Industrial projects require specialized knowledge, robust construction techniques, and strict adherence to safety standards. RGSM Builders has extensive experience in constructing factories, warehouses, manufacturing plants, and industrial facilities. We prioritize structural integrity, operational efficiency, and workplace safety in every industrial project we undertake. Our team understands the unique challenges of industrial construction and delivers facilities that support your operations for decades."
-      image="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80"
+      image="/img-32.jpg"
+      sidebarImage="/img-5.jpg"
       features={[
         'Manufacturing Plants & Factories',
         'Warehouses & Distribution Centers',

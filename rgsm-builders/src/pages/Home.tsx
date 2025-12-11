@@ -15,10 +15,10 @@ import {
   Shield,
 } from 'lucide-react'
 import { FeaturedProjects } from '../components/home/FeaturedProject'
-import { Testimonials } from '../components/home/Testimonial'
 import { ConstructionSection } from '../components/ConstructionSection'
 import { useEffect, useState } from 'react'
 import { Loader } from '../components/home/Loader'
+import { ConstructionShowcase } from '../components/shared/ConstructionShowcase'
 export function Home() {
   const whyChooseUs = [
     {
@@ -72,11 +72,11 @@ export function Home() {
           <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16">
             {[
               {
-                value: '10+',
+                value: '3+',
                 label: 'Years Experience',
               },
               {
-                value: '30+',
+                value: '20+',
                 label: 'Projects Completed',
               },
               {
@@ -84,7 +84,7 @@ export function Home() {
                 label: 'Client Satisfaction',
               },
               {
-                value: '200+',
+                value: '20+',
                 label: 'Team Members',
               },
             ].map((stat, index) => (
@@ -125,14 +125,14 @@ export function Home() {
               <AnimatedSection direction="right">
                 <div className="relative">
                   <img
-                    src="/img-21.avif"
+                    src="/img-29.jpg"
                     // src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
                     alt="Construction Excellence"
                     className="rounded-2xl shadow-2xl w-full "
                   />
                   {/* Experience Badge */}
                   <div className="absolute -bottom-6 -right-6 bg-accent text-white p-6 rounded-2xl shadow-xl hidden md:block">
-                    <div className="text-4xl font-bold">6+</div>
+                    <div className="text-4xl font-bold">3+</div>
                     <div className="text-sm opacity-90">
                       Years of Excellence
                     </div>
@@ -229,73 +229,14 @@ export function Home() {
       </section>
 
       <Stats />
+      <ConstructionShowcase/>
       <FeaturedProjects />
-      <Testimonials />
+      {/* <Testimonials /> */}
 
-      {/* Process Section */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <AnimatedSection className="text-center mb-16">
-            <span className="text-accent font-semibold tracking-wider uppercase text-sm">
-              How We Work
-            </span>
-            <h2 className="text-3xl md:text-5xl font-bold text-primary mt-3">
-              Our Simple Process
-            </h2>
-            <p className="text-gray-600 mt-4 max-w-2xl mx-auto">
-              From initial consultation to project completion, we make the
-              construction journey smooth and transparent.
-            </p>
-          </AnimatedSection>
-
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 relative">
-            {/* Connection Line */}
-            <div className="hidden md:block absolute top-16 left-[12.5%] right-[12.5%] h-0.5 bg-gray-200"></div>
-
-            {[
-              {
-                step: '01',
-                title: 'Consultation',
-                description:
-                  'We discuss your vision, requirements, and budget to understand your needs.',
-              },
-              {
-                step: '02',
-                title: 'Planning',
-                description:
-                  'Our team creates detailed plans, timelines, and cost estimates for your approval.',
-              },
-              {
-                step: '03',
-                title: 'Construction',
-                description:
-                  'Expert execution with regular updates and quality checks at every stage.',
-              },
-              {
-                step: '04',
-                title: 'Handover',
-                description:
-                  'Final inspection, documentation, and keys to your completed project.',
-              },
-            ].map((item, index) => (
-              <AnimatedSection key={index} delay={index * 0.15}>
-                <div className="text-center relative">
-                  <div className="w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center mx-auto mb-6 text-xl font-bold relative z-10 shadow-lg">
-                    {item.step}
-                  </div>
-                  <h4 className="text-xl font-bold text-primary mb-3">
-                    {item.title}
-                  </h4>
-                  <p className="text-gray-600">{item.description}</p>
-                </div>
-              </AnimatedSection>
-            ))}
-          </div>
-        </div>
-      </section>
+   
 
       {/* Partners/Clients Section */}
-      <section className="py-16 bg-gray-50">
+      {/* <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <AnimatedSection className="text-center mb-10">
             <p className="text-gray-500 font-medium">
@@ -327,7 +268,7 @@ export function Home() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* CTA Section */}
       <section className="py-24 bg-gradient-to-r from-primary to-primary-light text-white relative overflow-hidden">

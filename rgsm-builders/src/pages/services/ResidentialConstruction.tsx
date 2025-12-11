@@ -16,7 +16,8 @@ export function ResidentialConstruction() {
       title="Residential Construction"
       subtitle="Building dream homes with  attention to detail and superior craftsmanship"
       description="Your home is your sanctuary, and we treat it with the respect it deserves. RGSM Builders specializes in high-quality residential construction, from custom luxury homes to multi-unit developments. Our experienced team combines traditional craftsmanship with modern building techniques to create homes that are beautiful, functional, and built to last. We focus on quality materials, energy efficiency, and creating spaces that enhance your lifestyle and provide comfort for generations."
-      image="https://images.unsplash.com/photo-1580587771525-78b9dba3b91d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80"
+      image="/img-27.jpg"
+      sidebarImage="/img-19.jpg"
       features={[
         'Custom Home Design & Building',
         'Multi-Family Residential Units',

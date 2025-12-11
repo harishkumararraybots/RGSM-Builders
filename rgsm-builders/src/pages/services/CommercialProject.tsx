@@ -16,7 +16,8 @@ export function CommercialProjects() {
       title="Commercial Projects"
       subtitle="Creating spaces designed for business success, productivity, and growth"
       description="We understand that commercial spaces need to be both functional and impressive. RGSM Builders delivers commercial construction projects that optimize workflow, attract customers, and reflect your brand identity. From modern office complexes to retail outlets and hospitality venues, we build spaces that drive business success. Our team combines architectural excellence with practical functionality to create commercial environments that inspire productivity and leave lasting impressions."
-      image="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80"
+      image="/img-30.jpg"
+      sidebarImage="/img-8.jpg"
       features={[
         'Office Buildings & Corporate Complexes',
         'Retail Stores & Shopping Centers',

@@ -18,22 +18,15 @@ interface ServicePageTemplateProps {
   description: string
   image: string
   features: string[]
-  benefits: {
-    title: string
-    description: string
-    icon?: React.ReactNode
-  }[]
-  process: {
-    step: number
-    title: string
-    description: string
-  }[]
+  benefits: { title: string; description: string; icon?: React.ReactNode }[]
+  process: { step: number; title: string; description: string }[]
   gallery?: string[]
-  stats?: {
-    value: string
-    label: string
-  }[]
+  stats?: { value: string; label: string }[]
+
+  // ⭐ Add this
+  sidebarImage?: string
 }
+
 export function ServicePageTemplate({
   title,
   subtitle,
@@ -44,6 +37,7 @@ export function ServicePageTemplate({
   process,
   gallery,
   stats,
+  sidebarImage, 
 }: ServicePageTemplateProps) {
   const defaultStats = stats || [
     {
@@ -82,7 +76,8 @@ export function ServicePageTemplate({
             backgroundAttachment: 'fixed',
           }}
         >
-          <div className="absolute inset-0 bg-gradient-to-r from-primary/95 via-primary/80 to-primary/60"></div>
+           <div className="absolute inset-0 bg-gradient-to-r from-primary/40 via-primary/40 to-primary/20"></div>
+          {/* <div className="absolute inset-0 bg-gradient-to-r from-primary/95 via-primary/80 to-primary/60"></div> */}
         </div>
 
         <div className="container mx-auto px-4 relative z-10">
@@ -218,34 +213,14 @@ export function ServicePageTemplate({
               <div className="sticky top-24 space-y-6">
                 {/* Quote Card */}
                 <AnimatedSection delay={0.2}>
-                  <div className="bg-primary text-white p-8 rounded-2xl shadow-xl">
-                    <h3 className="text-xl font-bold mb-4">
-                      Need This Service?
-                    </h3>
-                    <p className="text-blue-100 mb-6">
-                      Contact our team today to discuss your project
-                      requirements and get a detailed quote.
-                    </p>
-                    <Button
-                      variant="accent"
-                      className="w-full justify-center mb-4"
-                      to="/contact"
-                    >
-                      Get a Free Quote
-                    </Button>
-                    <div className="text-center">
-                      <p className="text-blue-200 text-sm mb-2">
-                        Or call us directly:
-                      </p>
-                      <a
-                        href="tel:+15551234567"
-                        className="text-xl font-bold hover:text-accent transition-colors"
-                      >
-                      +91 – 86603 68760
-                      </a>
-                    </div>
-                  </div>
-                </AnimatedSection>
+                <div className="rounded-2xl shadow-xl overflow-hidden h-72">
+                  <img
+                    src={sidebarImage || '/default-sidebar.jpg'} // ⭐ fallback image
+                    alt="Service visual"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </AnimatedSection>
 
                 {/* Quick Info */}
                 <AnimatedSection delay={0.3}>
@@ -361,7 +336,7 @@ export function ServicePageTemplate({
       </section>
 
       {/* Gallery Section */}
-      <section className="py-20 bg-gray-50">
+      {/* <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <AnimatedSection className="text-center mb-16">
             <span className="text-accent font-semibold tracking-wider uppercase text-sm">
@@ -389,7 +364,7 @@ export function ServicePageTemplate({
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Testimonial Section */}
       <section className="py-20">
@@ -444,10 +419,10 @@ export function ServicePageTemplate({
                 Get a Free Quote
               </Button>
               <a
-                href="tel:+15551234567"
+                href="tel:+917019241607"
                 className="inline-flex items-center bg-white/10 backdrop-blur-sm border border-white/20 text-white px-8 py-4 rounded-md font-semibold hover:bg-white/20 transition-colors"
               >
-                <Phone className="w-5 h-5 mr-2" /> +1 (555) 123-4567
+                <Phone className="w-5 h-5 mr-2" /> +91 7019241607
               </a>
             </div>
           </AnimatedSection>

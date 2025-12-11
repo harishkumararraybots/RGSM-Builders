@@ -8,26 +8,20 @@ import {
   Calendar,
   Building2,
 } from 'lucide-react'
+
 export function FeaturedProjects() {
   const [activeCategory, setActiveCategory] = useState('all')
+
   const categories = [
-    {
-      id: 'all',
-      name: 'All Projects',
-    },
-    {
-      id: 'residential',
-      name: 'Residential',
-    },
-    {
-      id: 'commercial',
-      name: 'Commercial',
-    },
-    {
-      id: 'industrial',
-      name: 'Industrial',
-    },
+    { id: 'all', name: 'All Projects' },
+    { id: 'residential', name: 'Residential' },
+    { id: 'commercial', name: 'Commercial' },
+    { id: 'industrial', name: 'Industrial' },
+
+    // ⭐ NEW TAB ADDED
+    { id: 'renewable', name: 'Renewable' },
   ]
+
   const projects = [
     {
       title: 'Skyline Office Complex',
@@ -35,26 +29,23 @@ export function FeaturedProjects() {
       location: 'Bengaluru',
       year: '2023',
       size: '50,000 sq ft',
-      image:
-        'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800'
     },
-    {
-      title: 'Modern Riverside Villa',
-      category: 'residential',
-      location: 'Bengaluru',
-      year: '2023',
-      size: '8,500 sq ft',
-      image:
-        '/img-5.jpg',
-    },
+    // {
+    //   title: 'Modern Riverside Villa',
+    //   category: 'residential',
+    //   location: 'Bengaluru',
+    //   year: '2023',
+    //   size: '8,500 sq ft',
+    //   image: '/img-5.jpg'
+    // },
     {
       title: 'Tech Manufacturing Hub',
       category: 'industrial',
       location: 'Industrial Park',
       year: '2022',
       size: '120,000 sq ft',
-      image:
-        'https://images.unsplash.com/photo-1553434320-e9f5757140b1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      image: 'https://images.unsplash.com/photo-1553434320-e9f5757140b1?w=800'
     },
     {
       title: 'Luxury Apartment Tower',
@@ -62,8 +53,7 @@ export function FeaturedProjects() {
       location: 'Bengaluru',
       year: '2023',
       size: '200 Units',
-      image:
-        'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      image: 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800'
     },
     {
       title: 'Corporate Headquarters',
@@ -71,8 +61,7 @@ export function FeaturedProjects() {
       location: 'Bengaluru',
       year: '2022',
       size: '75,000 sq ft',
-      image:
-        'https://images.unsplash.com/photo-1554435493-93422e8220c8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      image: 'https://images.unsplash.com/photo-1554435493-93422e8220c8?w=800'
     },
     {
       title: 'Logistics Warehouse',
@@ -80,14 +69,25 @@ export function FeaturedProjects() {
       location: 'Bengaluru',
       year: '2023',
       size: '200,000 sq ft',
-      image:
-        'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      image: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=800'
     },
+
+    // ⭐ NEW RENEWABLE PROJECT ADDED
+    {
+      title: 'Solar Power Plant',
+      category: 'renewable',
+      location: 'Mysuru',
+      year: '2024',
+      size: '5 MW Plant',
+      image: 'https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?w=800'
+    }
   ]
+
   const filteredProjects =
     activeCategory === 'all'
       ? projects
       : projects.filter((p) => p.category === activeCategory)
+
   return (
     <section className="py-24 bg-white">
       <div className="container mx-auto px-4">

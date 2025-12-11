@@ -41,24 +41,24 @@ export function Stats() {
   const stats = [
     {
       label: 'Years of Excellence',
-      value: 6,
+      value: 3,
       suffix: '+',
       icon: <Clock className="w-8 h-8" />,
       description: 'Industry experience',
     },
     {
       label: 'Projects Completed',
-      value: 30,
+      value: 20,
       suffix: '+',
       icon: <Building className="w-8 h-8" />,
       description: 'Successful deliveries',
     },
     {
-      label: 'Client Satisfaction',
-      value: 98,
-      suffix: '%',
+      label: 'Ongoing Projects',
+      value: 10,
+      suffix: '+',
       icon: <TrendingUp className="w-8 h-8" />,
-      description: 'Happy customers',
+      description: 'Projects currently in progress',
     },
     {
       label: 'Expert Team Members',
@@ -76,7 +76,7 @@ export function Stats() {
     // },
     {
       label: 'Cities Served',
-      value: 15,
+      value: 10,
       suffix: '+',
       icon: <MapPin className="w-8 h-8" />,
       description: 'Regional coverage',

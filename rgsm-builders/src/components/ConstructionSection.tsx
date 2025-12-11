@@ -43,13 +43,13 @@ export function ConstructionSection() {
 
           <div className="grid grid-cols-3 gap-6 pt-4">
             <div>
-              <p className="text-2xl font-bold text-[#1E3A8A]">6+</p>
+              <p className="text-2xl font-bold text-[#1E3A8A]">3+</p>
               <p className="text-xs text-gray-500 uppercase tracking-wide">
                 Years Experience
               </p>
             </div>
             <div>
-              <p className="text-2xl font-bold text-[#1E3A8A]">30+</p>
+              <p className="text-2xl font-bold text-[#1E3A8A]">20+</p>
               <p className="text-xs text-gray-500 uppercase tracking-wide">
                 Projects Delivered
               </p>

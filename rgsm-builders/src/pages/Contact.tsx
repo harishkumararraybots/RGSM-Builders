@@ -98,14 +98,16 @@ export function Contact() {
     color: 'blue',
   },
 
-  {
-    icon: <Clock className="w-6 h-6" />,
-    title: 'Working Hours',
-    primary: 'Mon - Sat: 9:00 AM - 6:30 PM',
-    secondary: 'Sunday: By Appointment',
-    action: null,
-    color: 'orange',
-  },
+{
+  icon: <Clock className="w-6 h-6" />,
+  title: 'Working Hours',
+  primary: 'Mon - Sat: 9:00 AM - 6:30 PM',
+  secondary: '2nd & 4th Saturday: Holiday | Sunday: By Appointment',
+  action: null,
+  color: 'orange',
+},
+
+
 ]
 
   const faqs = [
@@ -173,13 +175,13 @@ const sendWhatsApp = async () => {
           className="absolute inset-0 z-0"
           style={{
             backgroundImage:
-              'url("https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80")',
+              'url("/img-37.jpg")',
             backgroundPosition: 'center',
             backgroundSize: 'cover',
             backgroundAttachment: 'fixed',
           }}
         >
-          <div className="absolute inset-0 bg-gradient-to-r from-primary/70 via-primary/60 to-primary/40"></div>
+           <div className="absolute inset-0 bg-gradient-to-r from-primary/40 via-primary/40 to-primary/20"></div>
         </div>
 
         <div className="container mx-auto px-4 relative z-10">
@@ -272,7 +274,7 @@ const sendWhatsApp = async () => {
                       {method.primary}
                     </p>
                     {method.secondary && (
-                      <p className="text-gray-500 text-sm">
+                      <p className="text-gray-500 text-sm whitespace-pre-line">
                         {method.secondary}
                       </p>
                     )}

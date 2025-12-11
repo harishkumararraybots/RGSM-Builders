@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-import { ConstructionShowcase } from '../../components/shared/ConstructionShowcase'
 import { ServicePageTemplate } from '../../components/shared/ServicePageTemplate'
 import { Eye, Layers, Palette } from 'lucide-react'
 import { Loader } from '../../components/home/Loader';
@@ -21,6 +20,7 @@ export function ArchitecturalWork() {
       subtitle="Innovative 2D & 3D architectural design solutions that bring your vision to life"
       description="Our architectural services combine creativity with practicality to create stunning designs that are both beautiful and functional. We leverage the latest design software and visualization technologies to create comprehensive 2D floor plans, detailed elevations, and photorealistic 3D renderings. Our team of experienced architects works closely with you to understand your aesthetic preferences, functional requirements, and budget constraints, then translates them into designs that exceed expectations."
       image="https://images.unsplash.com/photo-1487958449943-2429e8be8625?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80"
+      sidebarImage="/img-9.jpg"
       features={[
         'Detailed 2D Floor Plans & Elevations',
         'Photorealistic 3D Modeling & Rendering',
@@ -96,7 +96,7 @@ export function ArchitecturalWork() {
         },
       ]}
     />
-  <ConstructionShowcase/>
+  
       </>
   )
 

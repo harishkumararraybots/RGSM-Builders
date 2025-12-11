@@ -53,34 +53,35 @@ export function About() {
       linkedin: '#',
     },
   ]
-  const milestones = [
-    {
-      year: '2021',
-      title: 'Company Founded',
-      description:
-        'Started as a small residential contractor with a vision for excellence',
-    },
-    {
-      year: '2022',
-      title: 'Commercial Expansion',
-      description: 'Expanded into commercial construction projects',
-    },
-    {
-      year: '2023',
-      title: 'Industrial Division',
-      description: 'Launched industrial infrastructure services',
-    },
-    {
-      year: '2024',
-      title: 'Regional Leader',
-      description: 'Became the leading construction company in the region',
-    },
-    {
-      year: '2025',
-      title: 'Innovation Hub',
-      description: 'Opened state-of-the-art design and planning center',
-    },
-  ]
+const milestones = [
+  {
+    year: '2023',
+    title: 'Founded',
+    description: 'Started operations with a focus on renewable construction.',
+  },
+  {
+    year: '2023',
+    title: 'First Renewable Project',
+    description: 'Completed our first major renewable energy project.',
+  },
+  {
+    year: '2024',
+    title: 'Commercial & Residential',
+    description: 'Expanded into commercial and residential construction.',
+  },
+  {
+    year: '2025',
+    title: 'Industrial Division',
+    description: 'Launched industrial construction services.',
+  },
+  {
+    year: '2025',
+    title: 'Regional Recognition',
+    description: 'Gained recognition as a leading multi-sector builder.',
+  },
+];
+
+
   const certifications = [
     {
       name: 'ISO 9001:2015',
@@ -101,17 +102,17 @@ export function About() {
   ]
   const stats = [
     {
-      value: '30+',
+      value: '20+',
       label: 'Projects Completed',
       icon: <Building2 className="w-6 h-6" />,
     },
     {
-      value: '4+',
+      value: '3+',
       label: 'Years Experience',
       icon: <Calendar className="w-6 h-6" />,
     },
     {
-      value: '200+',
+      value: '20+',
       label: 'Team Members',
       icon: <Users className="w-6 h-6" />,
     },
@@ -137,13 +138,13 @@ export function About() {
           className="absolute inset-0 z-0"
           style={{
             backgroundImage:
-              'url("https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80")',
+              'url("/img-33.jpg")',
             backgroundPosition: 'center',
             backgroundSize: 'cover',
             backgroundAttachment: 'fixed',
           }}
         >
-   <div className="absolute inset-0 bg-gradient-to-r from-primary/70 via-primary/60 to-primary/40"></div>
+       <div className="absolute inset-0 bg-gradient-to-r from-primary/40 via-primary/40 to-primary/20"></div>
         </div>
 
         <div className="container mx-auto px-4 relative z-10">
@@ -241,7 +242,7 @@ export function About() {
                   />
                   {/* Floating Card */}
                   <div className="absolute -bottom-8 -right-8 bg-accent text-white p-6 rounded-xl shadow-xl hidden md:block">
-                    <div className="text-4xl font-bold">6+</div>
+                    <div className="text-4xl font-bold">3+</div>
                     <div className="text-sm opacity-90">
                       Years of Excellence
                     </div>
@@ -502,7 +503,7 @@ export function About() {
       </section>
 
       {/* Team Section */}
-      <section className="py-20">
+      {/* <section className="py-20">
         <div className="container mx-auto px-4">
           <AnimatedSection className="text-center mb-16">
             <span className="text-accent font-semibold tracking-wider uppercase text-sm">
@@ -550,10 +551,10 @@ export function About() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Certifications Section */}
-      <section className="py-20 bg-gray-50">
+      {/* <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <AnimatedSection className="text-center mb-16">
             <span className="text-accent font-semibold tracking-wider uppercase text-sm">
@@ -578,8 +579,68 @@ export function About() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
+   {/* Process Section */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <AnimatedSection className="text-center mb-16">
+            <span className="text-accent font-semibold tracking-wider uppercase text-sm">
+              How We Work
+            </span>
+            <h2 className="text-3xl md:text-5xl font-bold text-primary mt-3">
+              Our Simple Process
+            </h2>
+            <p className="text-gray-600 mt-4 max-w-2xl mx-auto">
+              From initial consultation to project completion, we make the
+              construction journey smooth and transparent.
+            </p>
+          </AnimatedSection>
 
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 relative">
+            {/* Connection Line */}
+            <div className="hidden md:block absolute top-16 left-[12.5%] right-[12.5%] h-0.5 bg-gray-200"></div>
+
+            {[
+              {
+                step: '01',
+                title: 'Consultation',
+                description:
+                  'We discuss your vision, requirements, and budget to understand your needs.',
+              },
+              {
+                step: '02',
+                title: 'Planning',
+                description:
+                  'Our team creates detailed plans, timelines, and cost estimates for your approval.',
+              },
+              {
+                step: '03',
+                title: 'Construction',
+                description:
+                  'Expert execution with regular updates and quality checks at every stage.',
+              },
+              {
+                step: '04',
+                title: 'Handover',
+                description:
+                  'Final inspection, documentation, and keys to your completed project.',
+              },
+            ].map((item, index) => (
+              <AnimatedSection key={index} delay={index * 0.15}>
+                <div className="text-center relative">
+                  <div className="w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center mx-auto mb-6 text-xl font-bold relative z-10 shadow-lg">
+                    {item.step}
+                  </div>
+                  <h4 className="text-xl font-bold text-primary mb-3">
+                    {item.title}
+                  </h4>
+                  <p className="text-gray-600">{item.description}</p>
+                </div>
+              </AnimatedSection>
+            ))}
+          </div>
+        </div>
+      </section>
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-primary to-primary-light text-white relative overflow-hidden">
         <div className="absolute inset-0">

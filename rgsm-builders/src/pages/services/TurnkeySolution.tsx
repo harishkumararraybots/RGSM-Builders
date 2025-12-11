@@ -16,7 +16,8 @@ export function TurnkeySolutions() {
       title="Turnkey Solutions"
       subtitle="Complete project handling from concept to keys - hassle-free construction"
       description="Our turnkey solutions offer a completely hassle-free construction experience. RGSM Builders takes full responsibility for the entire project lifecycle - from initial design and engineering through construction and interior finishing to final handover. You simply share your vision, and we handle everything else. This comprehensive approach ensures seamless coordination, faster delivery, and a single point of accountability for your entire project."
-      image="/img-25.png"
+      image="/img-36.jpg"
+      sidebarImage="/img-5.jpg"
       features={[
         'End-to-End Project Management',
         'Design-Build Integration',

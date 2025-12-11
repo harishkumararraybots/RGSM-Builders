@@ -23,6 +23,7 @@ import { CommercialProjects } from "./pages/services/CommercialProject";
 import { TurnkeySolutions } from "./pages/services/TurnkeySolution";
 import { WhatsappButton } from "./components/shared/WhatsappButton";
 import { WhatsappModal } from "./components/shared/WhatsappModal";
+import { FloatingSocialBar } from "./components/home/FloatingSocialBar";
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -38,6 +39,7 @@ export function App() {
   return (
     <>
       <ScrollToTop />
+      <FloatingSocialBar/>
       <div className="flex flex-col min-h-screen bg-white">
         <Header />
         <main className="flex-grow">

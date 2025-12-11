@@ -9,13 +9,13 @@ export function Hero() {
         className="absolute inset-0 z-0"
         style={{
           backgroundImage:
-            'url("https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80")',
+            'url("/img-26.jpg")',
           backgroundPosition: 'center',
           backgroundSize: 'cover',
           backgroundAttachment: 'fixed',
         }}
       >
-       <div className="absolute inset-0 bg-gradient-to-r from-primary/70 via-primary/60 to-primary/40"></div>
+       <div className="absolute inset-0 bg-gradient-to-r from-primary/40 via-primary/40 to-primary/20"></div>
 
       </div>
 
@@ -171,7 +171,7 @@ export function Hero() {
                   ))}
                 </div>
                 <div className="ml-4">
-                  <div className="text-white font-bold">30+ Projects</div>
+                  <div className="text-white font-bold">20+ Projects</div>
                   <div className="text-blue-200 text-sm">
                     Successfully Completed
                   </div>

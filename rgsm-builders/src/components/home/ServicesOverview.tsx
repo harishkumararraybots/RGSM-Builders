@@ -31,7 +31,7 @@ export function ServicesOverview() {
       // icon: <Home className="w-6 h-6" />,
       link: '/services/residential-construction',
       image:
-        '/img-20.jpg',
+        '/img-34.jpg',
     },
     {
       title: 'Commercial Projects',
@@ -40,7 +40,7 @@ export function ServicesOverview() {
       // icon: <Building2 className="w-6 h-6" />,
       link: '/services/commercial-projects',
       image:
-        'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+        '/img-28.jpg',
     },
     {
       title: 'Industrial Infrastructure',
@@ -67,7 +67,7 @@ export function ServicesOverview() {
       // icon: <Key className="w-6 h-6" />,
       link: '/services/turnkey-solutions',
       image:
-        '/img-13.jpg',
+        '/img-36.jpg',
     },
     {
       title: 'Steel Structure Design',
@@ -76,7 +76,7 @@ export function ServicesOverview() {
       // icon: <HardHat className="w-6 h-6" />,
       link: '/services/steel-structure-design',
       image:
-        'https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+        '/img-39.avif',
     },
   ]
   return (

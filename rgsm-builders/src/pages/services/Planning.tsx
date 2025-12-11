@@ -17,6 +17,7 @@ export function Planning() {
       subtitle="Strategic construction planning and project management that sets the foundation for success"
       description="Effective planning is the cornerstone of any successful construction project. At RGSM Builders, we provide comprehensive planning services that lay the groundwork for excellence. Our experienced team conducts thorough feasibility studies, creates detailed project schedules, and develops accurate cost estimates to ensure your project starts on the right foundation. We work closely with you to understand your vision, requirements, and constraints, then translate them into actionable plans that guide every phase of construction."
       image="https://images.unsplash.com/photo-1503387762-592deb58ef4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80"
+      sidebarImage="/img-12.jpg"
       features={[
         'Comprehensive Feasibility Studies',
         'Detailed Site Analysis & Surveys',

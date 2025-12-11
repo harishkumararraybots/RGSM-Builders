@@ -16,7 +16,8 @@ export function RenovationRemodeling() {
       title="Renovation & Remodeling"
       subtitle="Transforming existing spaces into modern, functional environments"
       description="Breathe new life into existing structures with our comprehensive renovation and remodeling services. Whether it's updating an outdated home, modernizing a commercial office, or restoring a heritage building, RGSM Builders combines preservation with innovation to create refreshed, functional spaces. Our renovation experts assess existing conditions, identify opportunities for improvement, and execute transformations that enhance both aesthetics and functionality while respecting the original character of the structure."
-      image="https://images.unsplash.com/photo-1534237710431-e2fc698436d0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80"
+      image="/img-28.jpg"
+      sidebarImage="/img-29.jpg"
       features={[
         'Complete Home Renovations',
         'Kitchen & Bathroom Remodeling',

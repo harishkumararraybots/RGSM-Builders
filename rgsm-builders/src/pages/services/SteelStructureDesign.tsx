@@ -16,7 +16,8 @@ export function SteelStructureDesign() {
       title="Steel Structure Design"
       subtitle="Engineering strength, versatility, and modern architectural possibilities"
       description="Steel structures offer unmatched strength, durability, and design flexibility for modern construction. RGSM Builders specializes in the design, fabrication, and erection of steel structures for various applications. From industrial sheds and warehouses to high-rise building frames and architectural features, we deliver precision-engineered steel solutions. Our team combines structural engineering expertise with advanced fabrication capabilities to create steel structures that are safe, efficient, and aesthetically impressive."
-      image="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80"
+      image="/img-39.avif"
+      sidebarImage="/img-18.jpg"
       features={[
         'Pre-Engineered Buildings (PEB)',
         'Structural Steel Framing',
