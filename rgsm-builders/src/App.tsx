@@ -1,10 +1,5 @@
 import { useEffect, useState } from "react";
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  useLocation,
-} from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 
 import { Header } from "./components/layout/Header";
 import { Footer } from "./components/layout/Footer";
@@ -33,15 +28,18 @@ function ScrollToTop() {
 
   return null;
 }
- 
+
 export function App() {
-    const [openModal, setOpenModal] = useState(false);
+  const [openModal, setOpenModal] = useState(false);
+
   return (
     <>
       <ScrollToTop />
-      <FloatingSocialBar/>
+      <FloatingSocialBar />
+
       <div className="flex flex-col min-h-screen bg-white">
         <Header />
+
         <main className="flex-grow">
           <Routes>
             <Route path="/" element={<Home />} />
@@ -58,12 +56,14 @@ export function App() {
             <Route path="/services/steel-structure-design" element={<SteelStructureDesign />} />
           </Routes>
         </main>
+
         <Footer />
       </div>
-     <WhatsappButton onOpen={() => setOpenModal(true)} />
+
+      <WhatsappButton onOpen={() => setOpenModal(true)} />
       <WhatsappModal isOpen={openModal} onClose={() => setOpenModal(false)} />
     </>
   );
 }
 
-export default App; 
+export default App;

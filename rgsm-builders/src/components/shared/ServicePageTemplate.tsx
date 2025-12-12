@@ -35,7 +35,6 @@ export function ServicePageTemplate({
   features,
   benefits,
   process,
-  gallery,
   stats,
   sidebarImage, 
 }: ServicePageTemplateProps) {
@@ -57,12 +56,12 @@ export function ServicePageTemplate({
       label: 'Expert Team',
     },
   ]
-  const defaultGallery = gallery || [
-    '/img-12.jpg',
-    '/img-21.avif',
-    'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
-    'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
-  ]
+  // const defaultGallery = gallery || [
+  //   '/img-12.jpg',
+  //   '/img-21.avif',
+  //   'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
+  //   'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
+  // ]
   return (
     <div className="pt-20">
       {/* Hero Section */}

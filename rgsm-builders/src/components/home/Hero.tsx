@@ -9,7 +9,7 @@ export function Hero() {
         className="absolute inset-0 z-0"
         style={{
           backgroundImage:
-            'url("/img-26.jpg")',
+            'url("/img-2.jpeg")',
           backgroundPosition: 'center',
           backgroundSize: 'cover',
           backgroundAttachment: 'fixed',

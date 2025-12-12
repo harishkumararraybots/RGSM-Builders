@@ -8,8 +8,6 @@ import {
   ShieldCheck,
   Target,
   Lightbulb,
-  Linkedin,
-
   Calendar,
   TrendingUp,
   Building2,
@@ -19,40 +17,40 @@ import { InfoSection } from '../components/shared/InfoSection'
 import { useEffect, useState } from 'react'
 import { Loader } from '../components/home/Loader'
 export function About() {
-  const team = [
-    {
-      name: 'Rajesh Kumar',
-      role: 'Founder & CEO',
-      image:
-        'https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80',
-      bio: '25+ years in construction industry',
-      linkedin: '#',
-    },
-    {
-      name: 'Priya Sharma',
-      role: 'Chief Architect',
-      image:
-        'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80',
-      bio: 'Award-winning architectural designs',
-      linkedin: '#',
-    },
-    {
-      name: 'Amit Patel',
-      role: 'Project Director',
-      image:
-        'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80',
-      bio: 'Expert in large-scale projects',
-      linkedin: '#',
-    },
-    {
-      name: 'Sunita Reddy',
-      role: 'Head of Operations',
-      image:
-        'https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80',
-      bio: 'Streamlining construction processes',
-      linkedin: '#',
-    },
-  ]
+  // const team = [
+  //   {
+  //     name: 'Rajesh Kumar',
+  //     role: 'Founder & CEO',
+  //     image:
+  //       'https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80',
+  //     bio: '25+ years in construction industry',
+  //     linkedin: '#',
+  //   },
+  //   {
+  //     name: 'Priya Sharma',
+  //     role: 'Chief Architect',
+  //     image:
+  //       'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80',
+  //     bio: 'Award-winning architectural designs',
+  //     linkedin: '#',
+  //   },
+  //   {
+  //     name: 'Amit Patel',
+  //     role: 'Project Director',
+  //     image:
+  //       'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80',
+  //     bio: 'Expert in large-scale projects',
+  //     linkedin: '#',
+  //   },
+  //   {
+  //     name: 'Sunita Reddy',
+  //     role: 'Head of Operations',
+  //     image:
+  //       'https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80',
+  //     bio: 'Streamlining construction processes',
+  //     linkedin: '#',
+  //   },
+  // ]
 const milestones = [
   {
     year: '2023',
@@ -82,24 +80,24 @@ const milestones = [
 ];
 
 
-  const certifications = [
-    {
-      name: 'ISO 9001:2015',
-      description: 'Quality Management System',
-    },
-    {
-      name: 'ISO 14001:2015',
-      description: 'Environmental Management',
-    },
-    {
-      name: 'OHSAS 18001',
-      description: 'Occupational Health & Safety',
-    },
-    {
-      name: 'LEED Certified',
-      description: 'Green Building Standards',
-    },
-  ]
+  // const certifications = [
+  //   {
+  //     name: 'ISO 9001:2015',
+  //     description: 'Quality Management System',
+  //   },
+  //   {
+  //     name: 'ISO 14001:2015',
+  //     description: 'Environmental Management',
+  //   },
+  //   {
+  //     name: 'OHSAS 18001',
+  //     description: 'Occupational Health & Safety',
+  //   },
+  //   {
+  //     name: 'LEED Certified',
+  //     description: 'Green Building Standards',
+  //   },
+  // ]
   const stats = [
     {
       value: '20+',

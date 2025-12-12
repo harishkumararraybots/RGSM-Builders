@@ -38,7 +38,7 @@ app.post("/api/send-whatsapp", async (req, res) => {
       type: "template",
       template: {
         name: process.env.WA_TEMPLATE_NAME,
-        language: { code: "en_US" },
+        language: { code: "en" },
         components: [
           {
             type: "body",

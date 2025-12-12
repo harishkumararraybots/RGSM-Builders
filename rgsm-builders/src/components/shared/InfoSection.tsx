@@ -1,15 +1,12 @@
 import Lottie, { LottieRefCurrentProps } from "lottie-react";
 import CivilConstruction from "../../assets/animations/Civil Construction.json";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion} from "framer-motion";
 import { Link } from "react-router-dom";
 import { useEffect, useRef } from "react";
 
 export function InfoSection() {
-  const { scrollYProgress } = useScroll();
+  // const { scrollYProgress } = useScroll();
 
-  const rotateY = useTransform(scrollYProgress, [0, 1], [-10, 15]);
-  const rotateX = useTransform(scrollYProgress, [0, 1], [5, -5]);
-  const scale = useTransform(scrollYProgress, [0, 1], [1, 1.15]);
 const handleMouseMove = (e: any) => {
   const card = e.currentTarget;
   const rect = card.getBoundingClientRect();
