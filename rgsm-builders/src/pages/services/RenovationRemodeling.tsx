@@ -76,7 +76,7 @@ export function RenovationRemodeling() {
       ]}
       stats={[
         {
-          value: '250+',
+          value: '25+',
           label: 'Renovations Done',
         },
         {
@@ -88,7 +88,7 @@ export function RenovationRemodeling() {
           label: 'Client Satisfaction',
         },
         {
-          value: '15+',
+          value: '3+',
           label: 'Years Experience',
         },
       ]}

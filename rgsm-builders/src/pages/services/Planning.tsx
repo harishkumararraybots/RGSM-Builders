@@ -88,7 +88,7 @@ export function Planning() {
           label: 'On-Time Delivery',
         },
         {
-          value: '6+',
+          value: '3+',
           label: 'Years Experience',
         },
       ]}

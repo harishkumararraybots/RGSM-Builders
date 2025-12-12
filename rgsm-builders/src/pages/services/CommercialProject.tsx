@@ -76,7 +76,7 @@ export function CommercialProjects() {
       ]}
       stats={[
         {
-          value: '150+',
+          value: '15+',
           label: 'Commercial Projects',
         },
         {

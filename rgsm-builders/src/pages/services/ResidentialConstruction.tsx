@@ -76,7 +76,7 @@ export function ResidentialConstruction() {
       ]}
       stats={[
         {
-          value: '300+',
+          value: '20+',
           label: 'Homes Built',
         },
         {
@@ -88,7 +88,7 @@ export function ResidentialConstruction() {
           label: 'Design Awards',
         },
         {
-          value: '15+',
+          value: '3+',
           label: 'Years Experience',
         },
       ]}
